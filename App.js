@@ -6,35 +6,35 @@ const App = () => {
     <View style={styles.phone}>
       <View style={styles.screen}>
         <View style={styles.superior}>
-          <Text>X</Text>
-          <Text>Para ti &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; Siguiendo </Text>
+          <Text style={styles.whiteText}>X</Text>
+          <Text style={styles.whiteText}>Para ti &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; Siguiendo </Text>
         </View>
         <View style={styles.contenido}>
           <View style={styles.tweet}>
             <Image source={require('./assets/logo.jpg')} style={styles.avatar} />
             <View style={styles.tweetContent}>
               <View style={styles.userInfo}>
-                <Text>jesus182</Text>
-                <Text>@jesus_182</Text>
+                <Text style={styles.whiteText}>jesus182</Text>
+                <Text style={styles.whiteText}>@jesus_182</Text>
               </View>
-              <Text>
+              <Text style={styles.whiteText}>
                 🇲🇽 ¡Viva Hidalgo! 🌮✨ Disfrutando de los ricos pastes,
                 la cultura vibrante y la calidez de su gente. #Mexico #TravelAdventures 🌎❤️
               </Text>
               <View style={styles.tweetActions}>
-                <Text>💬 200</Text>
-                <Text>🔁 500</Text>
-                <Text>❤️ 100</Text>
+                <Text style={styles.whiteText}>💬 200</Text>
+                <Text style={styles.whiteText}>🔁 500</Text>
+                <Text style={styles.whiteText}>❤️ 100</Text>
                 <Image source={require('./assets/barras.png')} style={styles.barras} />
               </View>
             </View>
           </View>
         </View>
         <View style={styles.iconos}>
-          <Image source={require('./assets/inic.png')} />
-          <Image source={require('./assets/busc.png')} />
-          <Image source={require('./assets/not.png')} />
-          <Image source={require('./assets/icono.png')} />
+          <Image source={require('./assets/inic.png')} style={styles.icon} />
+          <Image source={require('./assets/busc.png')} style={styles.icon} />
+          <Image source={require('./assets/not.png')} style={styles.icon} />
+          <Image source={require('./assets/icono.png')} style={styles.icon} />
         </View>
       </View>
     </View>
@@ -44,6 +44,7 @@ const App = () => {
 const styles = StyleSheet.create({
   phone: {
     flex: 1,
+    backgroundColor: 'black',
   },
   screen: {
     flex: 1,
@@ -52,6 +53,7 @@ const styles = StyleSheet.create({
   superior: {
     flexDirection: 'row',
     justifyContent: 'space-between',
+    marginTop: 30, // Ajusta el margen superior según tus preferencias
   },
   contenido: {
     marginTop: 20,
@@ -85,9 +87,18 @@ const styles = StyleSheet.create({
     height: 20,
   },
   iconos: {
+    position: 'absolute',
+    bottom: 10,
     flexDirection: 'row',
     justifyContent: 'space-around',
-    marginTop: 20,
+    width: '100%',
+  },
+  icon: {
+    width: 30,
+    height: 30,
+  },
+  whiteText: {
+    color: 'white',
   },
 });
 
